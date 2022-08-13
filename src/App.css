@@ -71,4 +71,32 @@ form button {
 font-size: 1.7rem;
 text-align: center;
   }
+ /* search */
+ .search{
+    margin-top: 2.5rem;
+    height:7rem;
+  
+ }
+ .search h2{
+    font-size: 1.2rem;
+    margin:0;
+ }
+ form{
+    height:8rem;
+display:flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+ 
+ }
+ form input,button{
+       height:2rem;
+    font-size: 1rem;
+ }
+ form input{
+    width : 100%;
+ }
+ form button{
+    width:5rem;
+ }
 }
