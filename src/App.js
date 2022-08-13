@@ -7,36 +7,22 @@ import "./App.css";
 
 function App() {
   //state for user input search
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("react");
   //state for data from api
   const [bookData, setBookData] = useState([]);
   //fetching api
-  const apiFetch = async () => {
+  const apiFetch = async (search) => {
     let response = await fetch(
       `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyBGxpDYEOpN8ihF0iRPm2BqRa5EBfJq-yk`
     );
     let data = await response.json();
-    return data;
+    console.log(data);
   };
-  /* const searchBook = (evt) => {
-    if (evt.key === "Enter") {
-      fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=` +
-          search +
-          `&key=AIzaSyBGxpDYEOpN8ihF0iRPm2BqRa5EBfJq-yk`
-      ).then((res) =>  setBookData(res.data.items))
-      .catch(err => console.log("error"))
-    }
-  }; */
-  console.log("the book data is:", bookData);
-  //useeffect to fetch api
-  useEffect(() => {
-    apiFetch(search).then((result) => setBookData(result.data));
-  });
 
   //search click function
   const handleSubmit = (e) => {
     e.preventDefault();
+    apiFetch(search).then((result) => setBookData(result.data));
   };
 
   return (
