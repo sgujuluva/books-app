@@ -1,5 +1,7 @@
 //lib react
 import { useState, useEffect } from "react";
+//components
+import Card from "./components/Card";
 //styles
 import "./App.css";
 
@@ -57,6 +59,10 @@ console.log(bookData) */
             />
             <button>Search</button>
           </form>
+          <div className="container">
+          <Card/>
+          </div>
+          
         </div>
       </div>
     </div>
