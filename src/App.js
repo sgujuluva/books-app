@@ -5,19 +5,20 @@ import Card from "./components/Card";
 //styles
 import "./App.css";
 
-/* //fetching api
-const apiFetch = async () => {
-  let response = await fetch("https://www.googleapis.com/books/v1/volumes?q='+search+&key=AIzaSyBGxpDYEOpN8ihF0iRPm2BqRa5EBfJq-yk");
-  let data= await response.json();
-  return data;
-} */
 function App() {
   //state for user input search
   const [search, setSearch] = useState("");
   //state for data from api
   const [bookData, setBookData] = useState([]);
-
-  const searchBook = (evt) => {
+  //fetching api
+  const apiFetch = async () => {
+    let response = await fetch(
+      `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyBGxpDYEOpN8ihF0iRPm2BqRa5EBfJq-yk`
+    );
+    let data = await response.json();
+    return data;
+  };
+  /* const searchBook = (evt) => {
     if (evt.key === "Enter") {
       fetch(
         `https://www.googleapis.com/books/v1/volumes?q=` +
@@ -26,15 +27,12 @@ function App() {
       ).then((res) =>  setBookData(res.data.items))
       .catch(err => console.log("error"))
     }
-  };
-  
-  /* //useeffect to fetch api
-useEffect(() => {
-apiFetch(search)
-.then(result => setBookData(result.data.items) )
-
-},[])
-console.log(bookData) */
+  }; */
+  console.log("the book data is:", bookData);
+  //useeffect to fetch api
+  useEffect(() => {
+    apiFetch(search).then((result) => setBookData(result.data));
+  });
 
   //search click function
   const handleSubmit = (e) => {
@@ -55,14 +53,13 @@ console.log(bookData) */
               type="text"
               value={search}
               placeholder="Type a Book name"
-               onKeyPress={searchBook}
+              onKeyPress={apiFetch}
             />
             <button>Search</button>
           </form>
           <div className="container">
-          <Card/>
+            <Card book={bookData} />
           </div>
-          
         </div>
       </div>
     </div>
