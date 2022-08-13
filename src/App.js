@@ -3,6 +3,10 @@ import {useState} from "react";
 //styles
 import "./App.css";
 
+//fetching api
+const apiFetch = async () => {
+  let response = await fetch("https://www.googleapis.com/books/v1/volumes?q='+search+&key=AIzaSyBGxpDYEOpN8ihF0iRPm2BqRa5EBfJq-yk")
+}
 function App() {
 const [search,setSearch] = useState("");
 //search click function
