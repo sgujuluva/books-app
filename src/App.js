@@ -1,7 +1,10 @@
+//lib react
+import {useState} from "react";
 //styles
 import "./App.css";
 
 function App() {
+const [search,setSearch] = useState("");
   return (
     <div className="App">
       <div className="header">
@@ -10,7 +13,7 @@ function App() {
         </div>
         <div className="search">
           <h2>Search a Book</h2>
-          <form>
+          <form onChange={(e) => }>
             <input type="text" placeholder="Type a Book name" />
             <button>Search</button>
           </form>
