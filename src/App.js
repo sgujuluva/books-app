@@ -5,6 +5,12 @@ import "./App.css";
 
 function App() {
 const [search,setSearch] = useState("");
+//search click function
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(search)
+}
+
   return (
     <div className="App">
       <div className="header">
@@ -13,8 +19,8 @@ const [search,setSearch] = useState("");
         </div>
         <div className="search">
           <h2>Search a Book</h2>
-          <form onChange={(e) => }>
-            <input type="text" placeholder="Type a Book name" />
+          <form onSubmit={handleSubmit}>
+            <input onChange={(e) => setSearch(e.target.value)} type="text" value = {search} placeholder="Type a Book name" />
             <button>Search</button>
           </form>
         </div>
