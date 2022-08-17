@@ -16,13 +16,16 @@ function App() {
       `https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyBGxpDYEOpN8ihF0iRPm2BqRa5EBfJq-yk`
     );
     let data = await response.json();
-    console.log(data);
+    return data;
   };
 
   //search click function
   const handleSubmit = (e) => {
     e.preventDefault();
-    apiFetch(search).then((result) => setBookData(result.data));
+    apiFetch(search).then((result) => {
+      console.log(result);
+      setBookData(result.items);
+    });
   };
 
   return (
