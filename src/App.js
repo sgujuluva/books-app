@@ -46,11 +46,13 @@ function App() {
             />
             <button>Search</button>
           </form>
-          {/* <div className="container"> */}
-            <Card book={bookData} />
-          {/* </div> */}
+          
         </div>
+        
       </div>
+      {/* <div className="container"> */}
+      <Card book={bookData} />
+          {/* </div> */}
     </div>
   );
 }

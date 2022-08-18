@@ -1,13 +1,9 @@
 .card{
-   
-  border : 2px solid blue;
-
-width:100%;
+     border : 2px solid blue;
 
     border-radius: 25px;
     box-shadow: 0 5px 5px rgba(212,185,150,0.5);
 
-  
 }
 .card-wrapper{
     width:100%;
