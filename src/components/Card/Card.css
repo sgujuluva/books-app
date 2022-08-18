@@ -1,34 +1,42 @@
 .card{
-     border : 2px solid blue;
-
+    
+padding:2%;
     border-radius: 25px;
     box-shadow: 0 5px 5px rgba(212,185,150,0.5);
 
 }
 .card-wrapper{
+    background-color: antiquewhite;
     width:100%;
-    display:flex;
-  
-flex-wrap: wrap;
+    display:flex;  
+    flex-wrap: wrap;
 justify-content: space-between;
-  align-items: center;
+
+
 }
 .card-wrapper li{
-    border:2px solid red; 
+ border:1px solid grey;
     width:30%;
-    padding:2%;
-    background-color: antiquewhite;
+    padding:1.5%;
+    margin: 20px 10px;
     border-radius:30px;
     list-style: none;
 }
 .card-wrapper li img{
     width:100%;
-
+object-fit: cover;
 }
-.card-wrapper li h1{
+.book-details h1{
     font-size: 1.7rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;  
     overflow: hidden;
+}
+.book-details h3{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-wrapper .image{
+    width:100%;
 }

@@ -7,7 +7,10 @@ function Card({ book }) {
       <div className="card-wrapper">
         {book.map((book, index) => (
           <li key={index}>
+            <div className="image">
             <img src={book.volumeInfo.imageLinks.thumbnail} alt="book" />
+            </div>
+           
             <div className="book-details">
               <h1 className="title">{book.volumeInfo.title}</h1>
               <h3 className="sub-title">{book.volumeInfo.subtitle}</h3>
