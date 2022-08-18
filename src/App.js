@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   //state for user input search
-  const [search, setSearch] = useState("react");
+  const [search, setSearch] = useState("");
   //state for data from api
   const [bookData, setBookData] = useState([]);
   //fetching api
@@ -46,9 +46,9 @@ function App() {
             />
             <button>Search</button>
           </form>
-          <div className="container">
+          {/* <div className="container"> */}
             <Card book={bookData} />
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
