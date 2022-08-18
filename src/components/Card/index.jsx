@@ -5,16 +5,21 @@ function Card({book}) {
   return (
     <div className="card">
  <div className="card-wrapper">
-        <img src={Bookcover} alt="" />
+        {/* <img src={Bookcover} alt="" /> */}
         <div className="bottom">
           {book.map((book,index) =>{
             return (<div key={index}> 
-            {book.volumeInfo.title}</div>)
+           <h1 className="title">{book.volumeInfo.title}</h1>
+           <h3 className="sub-title">{book.volumeInfo.subtitle}</h3>
+           <h2 className="author">{book.volumeInfo.authors}</h2>
+           <h4 className="pub-date">{book.volumeInfo.publishedDate}</h4>
+           <div className="thumbnail">{book.imageLinks.thumbnail}</div>
+        
+            </div>)
             
             
           })}
-            <h3 className="title">React JS</h3>
-            <p className="amount">3290</p>
+            
         </div>
         </div>
     </div>
