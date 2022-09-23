@@ -1,10 +1,10 @@
 ## Book Search App
 
-**[Test this app yourself](will be there soon)**
+**[Test this app yourself](https://sgujuluva-books-app.vercel.app/)**
 
 ---
 
-![Screenshot from Project](will be there soon)
+![Screenshot from Project](./src/images/books.gif)
 
   
 ---
@@ -14,7 +14,7 @@ Book search app is designed to search book with the name. And the collections of
 
 ### How to use this Project
 
-If you search for a particular state in a country, the exact local time, date, time , weather condition, pressure, wind speed , sunrise and sunset details will be populated. 
+Type a keyword on the input field and hit search button. the results will be populated. if the keyword doesn't exist, it will show nothing.
 
 ##### Developed With
 
